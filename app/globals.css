@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 전역 스타일 */
+body {
+  background-color: #fef9f3;
+  color: #333;
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+/* 일기장 느낌의 페이지 */
+.diary-page {
+  background: linear-gradient(135deg, #fef9f3 0%, #fffbf7 100%);
+  min-height: 100vh;
+}
+
+/* 카드 그림자 효과 */
+.diary-card {
+  box-shadow: 0 4px 6px rgba(139, 111, 71, 0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.diary-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 12px rgba(139, 111, 71, 0.15);
+}
+
+/* 로딩 애니메이션 */
+@keyframes pulse-soft {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+
+.animate-pulse-soft {
+  animation: pulse-soft 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
